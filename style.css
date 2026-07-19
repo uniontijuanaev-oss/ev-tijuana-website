@@ -250,11 +250,71 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
+.map-frame-wide {
+  height: 420px;
+  margin-bottom: 40px;
+}
+
 .charger-card {
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: 20px;
   padding: 28px;
+}
+
+/* ---------- Station directory grid ---------- */
+.station-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.station-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.station-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.station-card-head h3 { margin: 0; font-size: 1.1rem; }
+
+.station-tag {
+  background: var(--gray-100);
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 5px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.station-card-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  background: var(--gray-100);
+  border: 1.5px dashed var(--gray-200);
+}
+
+.station-empty-icon { font-size: 1.8rem; margin-bottom: 12px; }
+
+.station-card-empty h3 { margin: 0 0 8px; font-size: 1.05rem; }
+
+.station-card-empty p {
+  margin: 0 0 20px;
+  color: var(--gray-500);
+  font-size: 0.92rem;
 }
 
 .charger-card h3 {
@@ -442,6 +502,7 @@ footer {
 @media (max-width: 860px) {
   .stats { grid-template-columns: repeat(2, 1fr); }
   .charger-layout { grid-template-columns: 1fr; }
+  .station-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .resource-grid { grid-template-columns: repeat(2, 1fr); }
   .fleet-grid { grid-template-columns: 1fr; }
